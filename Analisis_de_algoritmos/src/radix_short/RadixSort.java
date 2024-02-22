@@ -1,6 +1,4 @@
 package radix_short;
-
-
 import java.util.Arrays;
 import java.util.Random;
  
@@ -8,7 +6,7 @@ public class RadixSort {
 	
 	public static void main(String[] args) {
 		
-        int longitudArreglo = 120; // Longitud del arreglo aleatorio
+        int longitudArreglo = 12; // Longitud del arreglo aleatorio
         int[] arr = generarArregloAleatorio(longitudArreglo);
         
         System.out.println("Arreglo original:");
@@ -110,6 +108,4 @@ public class RadixSort {
         return arr;
     }
  
-    // Ejemplo de uso
-    
 }
