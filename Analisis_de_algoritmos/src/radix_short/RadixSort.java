@@ -6,17 +6,28 @@ public class RadixSort {
 	
 	public static void main(String[] args) {
 		
-        int longitudArreglo = 10; // Longitud del arreglo aleatorio
+        int longitudArreglo = 100; // Longitud del arreglo aleatorio
         int[] arr = generarArregloAleatorio(longitudArreglo);
         
         System.out.println("Arreglo original:");
         printArray(arr, longitudArreglo);
+        
+        long startTime = System.nanoTime(); // Iniciar temporizador
         radixSort(arr, longitudArreglo);
+        
+        long endTime = System.nanoTime(); 
+        long tiempoEjecucion = endTime -startTime;
         
         System.out.println("Arreglo ordenado:");
         printArray(arr, longitudArreglo);
+        System.out.println("\n Tiempo de ejecución: " + tiempoEjecucion + " nanosegundos.");
+        System.out.println("\n Tiempo de ejecución: " + convertirNanosegundosASegundos(tiempoEjecucion)+ " segundos");
     }
- 
+	
+	public static double convertirNanosegundosASegundos(long nanosegundos) {
+		return nanosegundos / 1_000_000_000.0;
+	}
+	
     
     static int obtener_maximo(int arr[], int n) {
     	
@@ -66,7 +77,7 @@ public class RadixSort {
             count[(arr[i] / exp) % 10]--;
             
         }
-        
+        System.out.println("Arreglo ordenado:");
         printArray(output,output.length);
  
         // Copia el array de salida al array original arr[]
