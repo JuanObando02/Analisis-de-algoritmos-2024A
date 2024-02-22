@@ -6,7 +6,7 @@ public class RadixSort {
 	
 	public static void main(String[] args) {
 		
-        int longitudArreglo = 12; // Longitud del arreglo aleatorio
+        int longitudArreglo = 10; // Longitud del arreglo aleatorio
         int[] arr = generarArregloAleatorio(longitudArreglo);
         
         System.out.println("Arreglo original:");
