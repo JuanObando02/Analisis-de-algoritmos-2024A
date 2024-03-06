@@ -38,7 +38,8 @@ public class Con_listas {
     public static List<Integer> count_lista(List<Integer> lista, int exp) {
     	
         // Crear un array de listas de tamaño 10 (0-9)
-        List<Integer>[] arrayDeListas = new ArrayList[10];
+    	int n=10;
+        List<Integer>[] arrayDeListas = new ArrayList[n];
         
         // Inicializar cada posición del array con una nueva lista vacía
         for (int i = 0; i < arrayDeListas.length; i++) {

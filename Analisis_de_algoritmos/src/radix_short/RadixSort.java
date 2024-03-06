@@ -7,7 +7,7 @@ public class RadixSort {
 	public static void main(String[] args) {
 		
         int longitudArreglo = 50; // Longitud del arreglo aleatorio
-        int[] arr = generarArregloAleatorio(longitudArreglo);
+        int[] arr = generateReversedArray(50);
 		
 		//int longitudArreglo = arr.length;
 		
@@ -15,15 +15,14 @@ public class RadixSort {
         printArray(arr, longitudArreglo);
         
         long startTime = System.nanoTime(); // Iniciar temporizador
-        radixSort(arr, longitudArreglo);
-        
+        radixSort(arr, longitudArreglo); 
         long endTime = System.nanoTime(); 
         long tiempoEjecucion = endTime -startTime;
         
         System.out.println("Arreglo ordenado:");
         printArray(arr, longitudArreglo);
-        System.out.println("\n Tiempo de ejecución: " + tiempoEjecucion + " nanosegundos.");
-        System.out.println("\n Tiempo de ejecución: " + convertirNanosegundosASegundos(tiempoEjecucion)+ " segundos");
+        System.out.println("Tiempo de ejecución: " + tiempoEjecucion + " nanosegundos.");
+        //System.out.println("\n Tiempo de ejecución: " + convertirNanosegundosASegundos(tiempoEjecucion)+ " segundos");
     }
 	
 	public static double convertirNanosegundosASegundos(long nanosegundos) {
@@ -117,9 +116,17 @@ public class RadixSort {
         int[] arr = new int[longitud];
         Random random = new Random();
         for (int i = 0; i < longitud; i++) {
-            arr[i] = random.nextInt(1000); // Rango de numeros aleatorios de 0 a 999
+            arr[i] = random.nextInt(100); // Rango de numeros aleatorios de 0 a 999
         }
         return arr;
     }
- 
+    
+    public static int[] generateReversedArray(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = size - i; // Array invertido para representar el peor caso
+        }
+        return array;
+    }
+    
 }

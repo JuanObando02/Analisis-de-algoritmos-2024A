@@ -4,9 +4,7 @@ public class BubbleSort {
     private int[] array;
     public static void main(String[] args) {
         // DubbleSort
-        int[] array = new int[] { 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36,
-                35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10,
-                9, 8, 7, 6, 5, 4, 3, 2, 1 };
+        int[] array = generateReversedArray(5000);
         BubbleSort bubbleSort = new BubbleSort(array);
 
         // Test1
@@ -18,7 +16,7 @@ public class BubbleSort {
         long endTime = System.nanoTime();
 
         System.out.println(bubbleSort);
-        System.out.println((endTime - startTime) + "ns");
+        System.out.println("Tiempo de ejecución: " + (endTime - startTime) + " nanosegundos");
     }
 
     public BubbleSort(int[] array) {
@@ -47,6 +45,14 @@ public class BubbleSort {
             }
         }
         return sb.toString();
+    }
+    
+    public static int[] generateReversedArray(int size) {
+        int[] array = new int[size];
+        for (int i = 0; i < size; i++) {
+            array[i] = size - i; // Array invertido para representar el peor caso
+        }
+        return array;
     }
 }
 
