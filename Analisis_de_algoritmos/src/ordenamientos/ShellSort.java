@@ -6,7 +6,7 @@ public class ShellSort {
 
 	public static void main(String[] args) {
         
-		int longitudArreglo=50;
+		int longitudArreglo=5000;
 		int[] arr = generateReversedArray(longitudArreglo);
 		
         System.out.println("Array Original: " + Arrays.toString(arr));

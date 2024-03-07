@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class RadixSort {
 
 	public static void main(String[] args) {
-		int longitudArreglo=50;
+		int longitudArreglo=5000;
         int[] arr = generateReversedArray(longitudArreglo);
 		
         System.out.println("Arreglo original:");

@@ -3,7 +3,7 @@ package ordenamientos;
 public class Bubblesort {
     
     public static void main(String[] args) {
-    	int longitudArreglo=50;
+    	int longitudArreglo=5000;
         int[] array = generateReversedArray(longitudArreglo);
         System.out.println("Arreglo original:");
         printArray(array);

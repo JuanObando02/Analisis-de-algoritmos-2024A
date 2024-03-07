@@ -3,7 +3,7 @@ package ordenamientos;
 public class Mergesort {
 	
 	public static void main(String[] args) {
-		int longitudArreglo=50;
+		int longitudArreglo=5000;
         int[] arr = generateReversedArray(longitudArreglo);
         
         Mergesort mergeSort = new Mergesort();
