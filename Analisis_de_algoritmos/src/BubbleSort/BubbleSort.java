@@ -1,13 +1,12 @@
 package BubbleSort;
 
-import java.util.Random;
-
 public class BubbleSort {
     private int[] array;
     public static void main(String[] args) {
         // DubbleSort
-    	int longitudArreglo = 5000; // Longitud del arreglo aleatorio
-        int[] array = generarArregloAleatorio(longitudArreglo);
+        int[] array = new int[] { 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36,
+                35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10,
+                9, 8, 7, 6, 5, 4, 3, 2, 1 };
         BubbleSort bubbleSort = new BubbleSort(array);
 
         // Test1
@@ -17,11 +16,9 @@ public class BubbleSort {
         long startTime = System.nanoTime();
         bubbleSort.sort();
         long endTime = System.nanoTime();
-        long tiempoEjecucion = endTime -startTime;
 
         System.out.println(bubbleSort);
-        System.out.println("\n Tiempo de ejecución: " + tiempoEjecucion + " nanosegundos.");
-        System.out.println("\n Tiempo de ejecución: " + convertirNanosegundosASegundos(tiempoEjecucion)+ " segundos");
+        System.out.println((endTime - startTime) + "ns");
     }
 
     public BubbleSort(int[] array) {
@@ -51,18 +48,5 @@ public class BubbleSort {
         }
         return sb.toString();
     }
-    
-    static int[] generarArregloAleatorio(int longitud) {
-    	
-        int[] arr = new int[longitud];
-        Random random = new Random();
-        for (int i = 0; i < longitud; i++) {
-            arr[i] = random.nextInt(1000); // Rango de numeros aleatorios de 0 a 999
-        }
-        return arr;
-    }
-    static double convertirNanosegundosASegundos(long nanosegundos) {
-		return nanosegundos / 1_000_000_000.0;
-	}
 }
 

@@ -7,21 +7,16 @@ import java.util.Random;
 public class Con_listas {
 	
 	public static void main(String[] args) {
-		int cantidad=1000;
+		int cantidad=10;
 		
         List<Integer> myList = new ArrayList<>();
         generarNumerosAleatorios(myList, cantidad);
 
         System.out.println("Lista original:");
         System.out.println(myList);
-        long startTime = System.nanoTime(); // Iniciar temporizador
+        
         // Llamar a la función radixSort para ordenar la lista
         myList = radixSort(myList);
-        long endTime = System.nanoTime(); 
-        long tiempoEjecucion = endTime -startTime;
-        
-        System.out.println("\n Tiempo de ejecución: " + tiempoEjecucion + " nanosegundos.");
-        //System.out.println("\n Tiempo de ejecución: " + convertirNanosegundosASegundos(tiempoEjecucion)+ " segundos");
         
         System.out.println("Lista ordenada:");
         System.out.println(myList);

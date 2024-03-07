@@ -6,7 +6,7 @@ public class RadixSort {
 	
 	public static void main(String[] args) {
 		
-        int longitudArreglo = 1000; // Longitud del arreglo aleatorio
+        int longitudArreglo = 50; // Longitud del arreglo aleatorio
         int[] arr = generarArregloAleatorio(longitudArreglo);
 		
 		//int longitudArreglo = arr.length;
@@ -26,7 +26,7 @@ public class RadixSort {
         System.out.println("\n Tiempo de ejecución: " + convertirNanosegundosASegundos(tiempoEjecucion)+ " segundos");
     }
 	
-	 static double convertirNanosegundosASegundos(long nanosegundos) {
+	public static double convertirNanosegundosASegundos(long nanosegundos) {
 		return nanosegundos / 1_000_000_000.0;
 	}
 	
@@ -57,9 +57,9 @@ public class RadixSort {
             //contamos la cantidad de veces que esta ese numero
         
         }
-        System.out.println("\nCuenta de los digitos en el arreglo:");
-        printArray(count,count.length);
-        System.out.println("0 1 2 3 4 5 6 7 8 9 indices");
+        //System.out.println("\nCuenta de los digitos en el arreglo:");
+        //printArray(count,count.length);
+        //System.out.println("0 1 2 3 4 5 6 7 8 9 indices");
         
         //hacer una sumatoria de los elementos del arreglo
         //para saber la posicion de cada uno en el arreglo
@@ -67,9 +67,9 @@ public class RadixSort {
         	
             count[i] += count[i - 1];
         }
-        System.out.println("\nSumatoria de los elementos en el arreglo:");
-        printArray(count,count.length);
-        System.out.println("0 1 2 3 4 5 6 7 8 9 indices\n");
+        //System.out.println("\nSumatoria de los elementos en el arreglo:");
+        //printArray(count,count.length);
+        //System.out.println("0 1 2 3 4 5 6 7 8 9 indices\n");
  
         // Construye el array de salida
         for (int i = n - 1; i >= 0; i--) {
@@ -79,8 +79,8 @@ public class RadixSort {
             count[(arr[i] / exp) % 10]--;
             
         }
-        System.out.println("Arreglo ordenado:");
-        printArray(output,output.length);
+        //System.out.println("Arreglo ordenado:");
+        //printArray(output,output.length);
  
         // Copia el array de salida al array original arr[]
         for (int i = 0; i < n; i++) {
